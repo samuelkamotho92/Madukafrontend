@@ -1,7 +1,7 @@
 import { Outlet, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Topbar from "./Topbar/Topbar";
-import Sidebar from "./SideBar/Sidebar";
+import Sidebar from "./Sidebar/Sidebar";
 import Home from '../Pages/Home/Home';
 import './Dashboard.css';
 const Dashboard = () => {
