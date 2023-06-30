@@ -12,10 +12,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.1.1",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.13.6",
-    "@mui/styles": "^5.13.2",
-    "@mui/x-data-grid": "^6.9.0",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
     "firebase": "^9.23.0",
