@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import "./FeaturedInfo.css";
-import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
+import {ArrowUpwardOutlined,ArrowDownwardIcon}  from '@mui/icons-material'
 import { useSelector } from 'react-redux';
 // import { userRequest } from '../../../requestMethod.js';
 const FeaturedInfo = () => {
@@ -13,7 +13,7 @@ const FeaturedInfo = () => {
         <div className="featuredMoneyContainer">
           <span className="featuredMoney">{auctions.length}</span>
           <span className="featuredMoneyRate">
-            -1.4 <ArrowDownward className="featuredIcon negative"/>
+            -1.4 <ArrowDownwardIcon className="featuredIcon negative"/>
           </span>
         </div>
         <span className="featuredSub">Compared to last month</span>
@@ -23,7 +23,7 @@ const FeaturedInfo = () => {
         <div className="featuredMoneyContainer">
           <span className="featuredMoney">2000</span>
           <span className="featuredMoneyRate">
-            +2.4 <ArrowUpward className="featuredIcon"/>
+            +2.4 <ArrowUpwardOutlined className="featuredIcon"/>
           </span>
         </div>
         <span className="featuredSub">Compared to last month</span>

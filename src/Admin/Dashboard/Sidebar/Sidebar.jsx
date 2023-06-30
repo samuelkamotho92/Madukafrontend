@@ -1,20 +1,21 @@
 import React from 'react'
 import './Sidebar.css'
 import { NavLink } from 'react-router-dom';
-import {
-  LineStyle,
-  Timeline,
-  TrendingUp,
-  PermIdentity,
-  Storefront,
-  AttachMoney,
-  BarChart,
-  MailOutline,
-  DynamicFeed,
-  ChatBubbleOutline,
-  WorkOutline,
-  Report,
-} from "@material-ui/icons";
+// import {
+//   LineStyle,
+//   Timeline,
+//   TrendingUp,
+//   PermIdentity,
+//   Storefront,
+//   AttachMoney,
+//   BarChart,
+//   MailOutline,
+//   DynamicFeed,
+//   ChatBubbleOutline,
+//   WorkOutline,
+//   Report,
+// } from "@material-ui/icons";
+import {LineStyleIcon,Timeline,TrendingUpIcon,StorefrontIcon,BarChartIcon,MailOutlineIcon,DynamicFeedIcon,ChatBubbleIcon,WorkOutlineIcon,ReportIcon}  from '@mui/icons-material'
 const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -24,7 +25,7 @@ const Sidebar = () => {
         <ul className="sidebarList">
           <NavLink to="/admin/home" className="link">
           <li className="sidebarListItem active">
-            <LineStyle className="sidebarIcon" />
+            <LineStyleIcon className="sidebarIcon" />
             Home
           </li>
           </NavLink>
@@ -33,7 +34,7 @@ const Sidebar = () => {
             Analytics
           </li>
           <li className="sidebarListItem">
-            <TrendingUp className="sidebarIcon" />
+            <TrendingUpIcon className="sidebarIcon" />
             Sales
           </li>
         </ul>
@@ -43,12 +44,12 @@ const Sidebar = () => {
         <ul className="sidebarList">
           <NavLink to="/admin/auctions" className="link">
             <li className="sidebarListItem">
-              <Storefront className="sidebarIcon" />
+              <StorefrontIcon  className="sidebarIcon" />
               Auctions
             </li>
           </NavLink>
           <li className="sidebarListItem">
-            <BarChart className="sidebarIcon" />
+            <BarChartIcon className="sidebarIcon" />
             Reports
           </li>
         </ul>
@@ -57,15 +58,15 @@ const Sidebar = () => {
         <h3 className="sidebarTitle">Notifications</h3>
         <ul className="sidebarList">
           <li className="sidebarListItem">
-            <MailOutline className="sidebarIcon" />
+            <MailOutlineIcon className="sidebarIcon" />
             Mail
           </li>
           <li className="sidebarListItem">
-            <DynamicFeed className="sidebarIcon" />
+            <DynamicFeedIcon className="sidebarIcon" />
             Feedback
           </li>
           <li className="sidebarListItem">
-            <ChatBubbleOutline className="sidebarIcon" />
+            <ChatBubbleIcon className="sidebarIcon" />
             Messages
           </li>
         </ul>
@@ -74,7 +75,7 @@ const Sidebar = () => {
         <h3 className="sidebarTitle">Staff</h3>
         <ul className="sidebarList">
           <li className="sidebarListItem">
-            <WorkOutline className="sidebarIcon" />
+            <WorkOutlineIcon className="sidebarIcon" />
             Manage
           </li>
           <li className="sidebarListItem">
@@ -82,7 +83,7 @@ const Sidebar = () => {
             Analytics
           </li>
           <li className="sidebarListItem">
-            <Report className="sidebarIcon" />
+            <ReportIcon className="sidebarIcon" />
             Reports
           </li>
         </ul>
