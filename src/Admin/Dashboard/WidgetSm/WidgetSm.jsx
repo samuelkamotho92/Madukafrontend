@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import  './WidgetSm.css';
-import { Visibility } from "@material-ui/icons";
+import { MdVisibility } from "react-icons/md";
 // import { userRequest } from '../../../requestMethod';
 const WidgetSm = () => {
   const [users,setUsers] = useState([]);
@@ -37,7 +37,7 @@ const WidgetSm = () => {
               <span className="widgetSmUsername">username</span>
             </div>
             <button className="widgetSmButton">
-              <Visibility className="widgetSmIcon" />
+              <MdVisibility className="widgetSmIcon" />
               Display
             </button>
           </li>

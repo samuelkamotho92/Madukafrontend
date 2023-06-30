@@ -1,7 +1,7 @@
 import React from 'react'
 import {userRows} from '../../DummyData/Dummy'
 // import { DataGrid } from "@material-ui/data-grid";
-import {MdDelete} from 'react-icons'
+import {MdDelete} from 'react-icons/md'
 import { Link } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 import './Auctionlist.css';
