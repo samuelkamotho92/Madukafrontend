@@ -2,6 +2,7 @@ import React from 'react'
 import {userRows} from '../../DummyData/Dummy'
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
+import {MdDelete} from 'react-icons'
 import { Link } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 import './Auctionlist.css';
@@ -82,7 +83,7 @@ const handleDelete = (id)=>{
                 <Link to={"/admin/auction/" + params.row.id}>
                   <button className="auctionListEdit">Edit</button>
                 </Link>
-                <DeleteOutline
+                <MdDelete
                   className="auctionListDelete"
                   onClick={() => handleDelete(params.row.id)}
                 />
