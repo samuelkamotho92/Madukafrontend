@@ -1,15 +1,6 @@
 import React,{useState} from "react";
 import { Link } from "react-router-dom";
-import {
-  Publish,
-  TitleOutlined,
-  AttachMoneyOutlined,
-  BrandingWatermark,
-  CategoryOutlined,
-  DescriptionSharp,
-MoneyOutlined,
-  PhoneAndroidSharp
-} from "@material-ui/icons";
+import {MdPublish,MdTitle,MdOutlineMoney,MdBrandingWatermark,MdDescription,MdPhoneAndroid, MdCategory} from 'react-icons/md'
 import { useSelector,useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import './Auction.css';
@@ -63,35 +54,35 @@ alert('auction updated successfully');
           <div className="auctionShowBottom">
             <span className="auctionShowTitle">Account Details</span>
             <div className="auctionShowInfo">
-              < TitleOutlined className="auctionShowIcon" />
+              < MdTitle className="auctionShowIcon" />
               <span className="auctionShowInfoTitle">{auction?.title}</span>
             </div>
             <div className="auctionShowInfo">
-              <  AttachMoneyOutlined className="auctionShowIcon" />
+              <MdOutlineMoney className="auctionShowIcon" />
               <span className="auctionShowInfoTitle">{auction?.price}</span>
             </div>
             <div className="auctionShowInfo">
-              < BrandingWatermark className="auctionShowIcon" />
+              < MdBrandingWatermark className="auctionShowIcon" />
               <span className="auctionShowInfoTitle">{auction?.brand}</span>
             </div>
             <div className="auctionShowInfo">
-              <CategoryOutlined className="auctionShowIcon" />
+              <MdCategory className="auctionShowIcon" />
               <span className="auctionShowInfoTitle">{auction?.category}</span>
             </div>
             <div className="auctionShowInfo">
-              <DescriptionSharp className="auctionShowIcon" />
+              <MdDescription className="auctionShowIcon" />
               <span className="auctionShowInfoTitle">
                 {auction?.description}
               </span>
             </div>
             <div className="auctionShowInfo">
-              <MoneyOutlined className="auctionShowIcon" />
+              <MdOutlineMoney className="auctionShowIcon" />
               <span className="auctionShowInfoTitle">
                 {auction?.paymentMethod}
               </span>
             </div>
             <div className="auctionShowInfo">
-              <PhoneAndroidSharp className="auctionShowIcon" />
+              <MdPhoneAndroid className="auctionShowIcon" />
               <span className="auctionShowInfoTitle">
                 {auction?.phoneNumber}
               </span>
@@ -183,7 +174,7 @@ alert('auction updated successfully');
                   alt={auction?.title}
                 />
                 <label htmlFor="file">
-                  <Publish className="auctionUpdateIcon" />
+                  <MdPublish className="auctionUpdateIcon" />
                 </label>
                 <input type="file" id="file" style={{ display: "none" }} />
               </div>
