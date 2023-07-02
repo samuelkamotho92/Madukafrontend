@@ -17,7 +17,7 @@ const Main = () => {
 useEffect(()=>{
   //fetch from db
   getAuction(dispatch);
-},[dispatch])
+},[])
 console.log(useSelector((state)=>state))
 const auctions = useSelector((state)=>state.auction.auctions);
 console.log(auctions,'get auctions');
