@@ -26,7 +26,6 @@ import axios from 'axios'
 import {toast} from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { apiDomain } from '../utils/utils';
-
 export const registerUser = async(dispatch,user)=>{
 try{
     console.log(user)
@@ -97,10 +96,10 @@ export const login = async (dispatch, user) => {
 dispatch(getAuctionStart());
 try{
 const res =  await fetch(`${apiDomain}/auctions`);
+console.log(res);
 const data = await res.json();
 console.log(data);
 dispatch(getAuctionSuccess(data))
-return data;
 }catch(err){
 dispatch(getAuctionFailure(err));
 }

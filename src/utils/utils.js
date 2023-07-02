@@ -1,1 +1,1 @@
-export const apiDomain = 'https://madukaapi.azurewebsites.net/';
+export const apiDomain = 'https://madukaapi.azurewebsites.net';
