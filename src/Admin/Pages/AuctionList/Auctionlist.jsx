@@ -1,6 +1,6 @@
 import React from 'react'
 import {userRows} from '../../DummyData/Dummy'
-// import { DataGrid } from "@material-ui/data-grid";
+import { DataGrid } from '@mui/x-data-grid';
 import {MdDelete} from 'react-icons/md'
 import { Link } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
@@ -93,7 +93,7 @@ const handleDelete = (id)=>{
       ];
   return (
     <div className="auctionList" style={{ height: '100vh', width: '100%' ,margin:'10px 2px' }}>
-    {/* <DataGrid
+    <DataGrid
       rows={auctions}
       disableSelectionOnClick
       columns={columns}
@@ -101,7 +101,7 @@ const handleDelete = (id)=>{
       pageSize={8}
       checkboxSelection
     style={{margin:'3px'}}
-    /> */}
+    />
 
   </div>
   )
