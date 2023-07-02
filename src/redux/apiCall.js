@@ -96,7 +96,7 @@ export const login = async (dispatch, user) => {
 dispatch(getAuctionStart());
 try{
 const res =  await fetch(`${apiDomain}/auctions`);
-console.log(res.json(),'all data');
+console.log(await res.json(),'all data');
 const {data} = await res.json();
 dispatch(getAuctionSuccess(data))
 }catch(err){
