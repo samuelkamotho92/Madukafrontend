@@ -8,12 +8,10 @@ import { updateAuction } from "../../../redux/apiCall";
 const Auction = () => {
   let auctionId;
   const location = useLocation();
-  console.log(location.pathname.split('/')[3]);
   auctionId = location.pathname.split("/")[3];
-  const auction = useSelector((state) => state.auction.auctions.data[0]).find(
+  const auction = useSelector((state) => state.auction.auctions[0]).find(
     (auction) => auction.id == auctionId
   );
-  console.log(auction);
   const [inputs, setInputs] = useState();
   const dispatch = useDispatch();
   const handleChange = (e)=>{
@@ -26,7 +24,6 @@ const Auction = () => {
 const handleClick = (e)=>{
 e.preventDefault();
 const auctionsUpdate = {...inputs};
-console.log(auctionsUpdate);
 updateAuction(auctionsUpdate,auctionId,dispatch);
 alert('auction updated successfully');
 }
@@ -43,7 +40,7 @@ alert('auction updated successfully');
         <div className="auctionShow">
           <div className="auctionShowTop">
             <img
-              src={auction?.photos?.replace(/\[|\]/g, '').split(',')[0].replace(/"/g, '')}
+              src={auction?.photos?.replace(/\[|\]/g, '').split(',')[0].replace(/"/g, '').replace(/'/g, '')}
               alt={auction?.title}
               className="auctionShowImg"
             />
@@ -170,7 +167,7 @@ alert('auction updated successfully');
               <div className="auctionUpdateUpload">
                 <img
                   className="auctionUpdateImg"
-                  src={auction?.photos.replace(/\[|\]/g, '').split(',')[0].replace(/"/g, '')}
+                  src={auction?.photos.replace(/\[|\]/g, '').split(',')[0].replace(/"/g, '').replace(/'/g, '')}
                   alt={auction?.title}
                 />
                 <label htmlFor="file">

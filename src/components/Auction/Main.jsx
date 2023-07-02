@@ -14,23 +14,17 @@ import {Filterprod} from '../../pages/Auctions';
 const Main = () => {
   const dispatch = useDispatch();
   const {filterVal,setfilterVal} = useContext(Filterprod);
-  console.log(filterVal);
 useEffect(()=>{
   //fetch from db
   getAuction(dispatch);
 },[dispatch])
-console.log(useSelector((state)=>state));
-console.log(useSelector((state)=>state.auction.auctions.data[0],'auctions'))
-const auctions = useSelector((state)=>state.auction.auctions.data);
-console.log(auctions[0],'getData');
-const pro = auctions[0].findIndex((auction)=>auction.id == 4);
-console.log(pro)
+const auctions = useSelector((state)=>state.auction.auctions);
 let prod;
 for (let i = 0; i < auctions.length; i++) {
 prod =  auctions[i];
 }
 console.log(prod);
-let str;
+// let str;
 
   return (
     <div className='main m-7'>   
@@ -120,8 +114,8 @@ let str;
 <div className='flex-1 relative overflow-hidden border rounded-[20px] hover:opacity-90  h-[50vh] m-3' key={id}>
 <Link to={`${id}`}>
 <div className='rounded-[20px] w-[100%] object-cover h-[100%]'>
-  {console.log(photos?.replace(/\[|\]/g, '').split(',')[0].replace(/"/g, ''))}
-<img src={photos?.replace(/\[|\]/g, '').split(',')[0].replace(/"/g, '')} width="" alt='image' />
+  {console.log(photos?.replace(/\[|\]/g, '').split(',')[0].replace(/"/g, '').replace(/'/g, ''))}
+<img src={photos?.replace(/\[|\]/g, '').split(',')[0].replace(/"/g, '').replace(/'/g, '')} width="" alt='image' />
 </div>
 <div className='flex absolute w-[100%] h-[100%] left-0 top-0 items-center justify-center flex-col'>
 <span className="inline-block animate-bounce rounded-full p-4 bg-teal-400 text-white text-sm">Latest Product
@@ -143,6 +137,7 @@ let str;
    </div>
     </div>
     </div>
+
   )
 }
 

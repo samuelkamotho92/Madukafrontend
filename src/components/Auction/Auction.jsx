@@ -11,8 +11,7 @@ let auctionId;
 const location = useLocation();
 console.log(location.pathname);
 auctionId = location.pathname.split('/')[2];
-const auction = useSelector((state)=>state.auction.auctions.data[0]).find(auction=>auction.id == auctionId);
-console.log(auction);
+const auction = useSelector((state)=>state.auction.auctions[0]).find(auction=> auction.id == auctionId);
 const [loading,setLoading] = useState(false);
   let [color, setColor] = useState("#ffffff");
 useEffect(()=>{

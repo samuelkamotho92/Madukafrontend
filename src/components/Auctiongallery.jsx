@@ -6,10 +6,11 @@ function Auctiongallery({photos}) {
   //.replace(/\[|\]/g, '')
   let dataImage = [];
   const images = photos?.replace(/"/g, '').split(',');
+  console.log(images);
 for (let i = 0; i < images.length; i++) {
-  console.log(images[i].replace(/^'|'$/g, '').replace(/\[|\]/g, ''));
+  console.log(images[i].replace(/^'|'$/g, '').replace(/\[|\]/g, '').replace(/'/g, ''));
  dataImage.push({
-  image:images[i].replace(/^'|'$/g, '').replace(/\[|\]/g, '')
+  image:images[i].replace(/^'|'$/g, '').replace(/\[|\]/g, '').replace(/'/g, '')
  })
 }
   
@@ -56,6 +57,7 @@ for (let i = 0; i < images.length; i++) {
         </div>
       </div>
     </div>
+ 
   );
 }
 

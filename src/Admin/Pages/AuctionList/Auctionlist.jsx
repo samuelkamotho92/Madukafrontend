@@ -9,9 +9,7 @@ import { deleteAuction } from '../../../redux/apiCall';
 const Auctionlist = () => {
   const dispatch = useDispatch();
 const user = useSelector((state)=>state.user?.currentUser?.data.username)
-console.log(user)
-const auctions = useSelector((state)=>state.auction.auctions.data[0].filter(auction=>auction.Owner == user));
-console.log(auctions);
+const auctions = useSelector((state)=>state.auction.auctions[0].filter(auction=>auction.Owner == user));
 const handleDelete = (id)=>{
     console.log("Delete Outline");
   deleteAuction(id,dispatch)
@@ -28,7 +26,7 @@ const handleDelete = (id)=>{
         headerName: "Photo",
         width: 200,
         renderCell: (params) => {
-            const img = params.row.photos?.replace(/\[|\]/g, '').split(',')[0].replace(/"/g, '')
+            const img = params.row.photos?.replace(/\[|\]/g, '').split(',')[0].replace(/"/g, '').replace(/'/g, '')
             console.log(img);
           return (
             <div className="auctionListauct">

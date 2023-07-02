@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 // import { userRequest } from '../../../requestMethod.js';
 const FeaturedInfo = () => {
   const user = useSelector((state)=>state.user?.currentUser?.data.username)
- const auctions = useSelector((state)=>state.auction.auctions.data[0].filter(auction=>auction.Owner == user));
+ const auctions = useSelector((state)=>state.auction.auctions[0].filter(auction=>auction.Owner == user));
   return (
 <div className="featured">
       <div className="featuredItem">
