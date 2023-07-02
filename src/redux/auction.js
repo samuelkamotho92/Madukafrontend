@@ -14,6 +14,7 @@ const auctionSlice = createSlice({
 state.isFetching = true;
     },
     getAuctionSuccess:(state,action)=>{
+      console.log(action.payload,'auctions data')
 state.isFetching = false;
 state.auctions = action.payload;
 state.error = false;
