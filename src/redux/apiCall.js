@@ -98,8 +98,8 @@ try{
 const res =  await fetch(`${apiDomain}/auctions`);
 // console.log(await res.json(),'all data');
 const data = await res.json();
-console.log(data,'check data');
-// dispatch(getAuctionSuccess(data))
+console.log(data.data,'check data');
+dispatch(getAuctionSuccess(data.data))
 }catch(err){
 dispatch(getAuctionFailure(err));
 }
